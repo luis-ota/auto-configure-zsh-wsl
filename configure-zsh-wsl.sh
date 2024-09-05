@@ -7,9 +7,9 @@ set -e
 echo "Updating and upgrading system packages..."
 sudo apt update && sudo apt upgrade -y
 
-# Install Zsh and essential packages
-echo "Installing Zsh and necessary packages..."
-sudo apt install -y zsh git curl wget
+# Install essential packages
+echo "Installing essential packages..."
+sudo apt install -y zsh git curl wget build-essential
 
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..."
@@ -39,9 +39,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh/z
 
 # Create .zshrc file with custom configurations
 echo "Creating .zshrc file..."
-
 cat > $HOME/.zshrc << 'EOF'
-
 # Customize history behavior
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export SUDO_PROMPT="Deploying root access for %u. Password pls: "
@@ -77,7 +75,7 @@ zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
 
 # Set history options
-HISTFILE=~/.config/zsh/zhistory
+HISTFILE=~/.zhistory
 HISTSIZE=5000
 SAVEHIST=5000
 HISTDUP=erase
@@ -111,29 +109,12 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Key bindings
+# Key bindings for history search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[[3~' delete-char
 
-# Xterm title configuration
-function xterm_title_precmd () {
-  print -Pn -- '\e]2;%n@%m %~\a'
-  [[ "$TERM" == 'screen'* ]] && print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-}\e\\'
-}
-
-function xterm_title_preexec () {
-  print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
-  [[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
-}
-
-if [[ "$TERM" == (kitty*|alacritty*|tmux*|screen*|xterm*) ]]; then
-  add-zsh-hook -Uz precmd xterm_title_precmd
-  add-zsh-hook -Uz preexec xterm_title_preexec
-fi
-
 # Aliases
-
 alias ls='eza --icons=always --color=always'
 alias ll='eza --icons=always --color=always -la'
 EOF
