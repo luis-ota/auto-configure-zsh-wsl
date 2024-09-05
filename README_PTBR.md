@@ -5,7 +5,8 @@ In [English](README.md) | Em [Português](README_PTBR.md)
 ---------------------------------------------------------
 
 Melhore sua experiência no WSL com Zsh e Oh My Zsh seguindo estes simples passos!
-
+|![example](img/example.png)|![gif example](img/example.gif)|
+|--------------------------------------|--------------------|
 ## Passos de Instalação
 
 1. **Clone ou Baixe o Repositório**
@@ -45,8 +46,8 @@ Melhore sua experiência no WSL com Zsh e Oh My Zsh seguindo estes simples passo
 
    Feche e reabra o Windows Terminal. Altere a fonte para a sua distro WSL para `JetBrainsMono Nerd Font`:
 
-   |![Configuração da Fonte](https://github.com/luis-ota/auto-configure-zsh-wsl/blob/main/font-config.png)|
-   |------------------------------------------------------------------------------------------------------|
+   |![Configuração da Fonte](img/font-config.png)|
+   |-----------------------------------------|
 
    Reinicie o terminal para aplicar as mudanças.
 
