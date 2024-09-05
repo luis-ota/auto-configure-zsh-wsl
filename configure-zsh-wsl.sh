@@ -75,7 +75,7 @@ zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
 
 # Set history options
-HISTFILE=~/.zhistory
+HISTFILE=~/.zsh/.zhistory
 HISTSIZE=5000
 SAVEHIST=5000
 HISTDUP=erase
