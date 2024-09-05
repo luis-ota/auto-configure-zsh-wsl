@@ -5,6 +5,9 @@ In [English](README.md) | Em [Português](README_PTBR.md)
 ---------------------------------------------------------
 
 Enhance your WSL experience with Zsh and Oh My Zsh by following these simple steps!
+|![example](img/example.png)|![gif example](img/example.gif)|
+|--------------------------------------|--------------------|
+
 
 ## Installation Steps
 
@@ -45,8 +48,8 @@ Enhance your WSL experience with Zsh and Oh My Zsh by following these simple ste
 
    Close and reopen the Windows Terminal. Change the font for your WSL distro to `JetBrainsMono Nerd Font`:
 
-   |![Font Configuration](https://github.com/luis-ota/auto-configure-zsh-wsl/blob/main/font-config.png)|
-   |---------------------------------------------------------------------------------------------------|
+   |![Font Configuration](img/font-config.png)|
+   |------------------------------------------|
 
    Restart the terminal to apply changes.
 
