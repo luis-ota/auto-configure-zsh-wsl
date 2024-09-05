@@ -1,5 +1,9 @@
 # Auto-Configure Zsh on WSL - Ubuntu
 
+---------------------------------------------------------
+In [English](README.md) | Em [Português](README_PTBR.md)
+---------------------------------------------------------
+
 Enhance your WSL experience with Zsh and Oh My Zsh by following these simple steps!
 
 ## Installation Steps
