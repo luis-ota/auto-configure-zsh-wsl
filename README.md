@@ -1,23 +1,50 @@
-# auto-configure-zsh-wsl
-script to configure zsh with oh my zsh on wsl!
+# Auto-Configure Zsh on WSL - Ubuntu
 
+Enhance your WSL experience with Zsh and Oh My Zsh by following these simple steps!
 
-clone the repo or copy the scprit
+## Installation Steps
 
-on wsl give the execution permission
+1. **Clone or Download the Repository**
 
-sudo chmod +x configure-zsh-wsl.sh
+   Clone the repository to get the script:
 
-run the script
+   ```bash
+   git clone https://github.com/luis-ota/auto-configure-zsh-wsl.git
+   
 
-./configure-zsh-wsl.sh
+2. **Set Execution Permissions**
 
-afte all install the JetBrainsMonoNerdFont-Medium.ttf on windows from this repo
+   Grant execute permissions to the script:
 
-close and reopen windows temrinal 
+   ```bash
+   chmod +x configure-zsh-wsl.sh
+   ```
 
-change the font of the wsl disto
+3. **Run the Script**
 
-[img]
+   Execute the script to configure Zsh:
 
-thats all!!
+   ```bash
+   ./configure-zsh-wsl.sh
+   ```
+
+4. **Install the Font**
+
+   Download the `JetBrainsMonoNerdFont-Medium.ttf` from [this repo](https://github.com/luis-ota/auto-configure-zsh-wsl/blob/main/JetBrainsMonoNerdFont-Medium.ttf).
+
+   **Install the Font on Windows:**
+
+   - Double-click the downloaded `.ttf` file to open it.
+   - Click "Install" to add the font to your system.
+
+5. **Update Windows Terminal Font**
+
+   Close and reopen the Windows Terminal. Change the font for your WSL distro to `JetBrainsMono Nerd Font`:
+
+   ![Font Configuration](https://github.com/luis-ota/auto-configure-zsh-wsl/blob/main/font-config.png)
+
+   Restart the terminal to apply changes.
+
+## Done!
+
+Enjoy your enhanced Zsh setup on WSL!
