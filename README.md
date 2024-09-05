@@ -45,7 +45,8 @@ Enhance your WSL experience with Zsh and Oh My Zsh by following these simple ste
 
    Close and reopen the Windows Terminal. Change the font for your WSL distro to `JetBrainsMono Nerd Font`:
 
-   ![Font Configuration](https://github.com/luis-ota/auto-configure-zsh-wsl/blob/main/font-config.png)
+   |![Font Configuration](https://github.com/luis-ota/auto-configure-zsh-wsl/blob/main/font-config.png)|
+   |---------------------------------------------------------------------------------------------------|
 
    Restart the terminal to apply changes.
 
