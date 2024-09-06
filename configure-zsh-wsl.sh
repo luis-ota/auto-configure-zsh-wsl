@@ -87,7 +87,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Custom prompt
 function dir_icon {
   if [[ "$PWD" == "$HOME" ]]; then
     echo "%B%F{cyan}%f%b"
@@ -96,7 +95,11 @@ function dir_icon {
   fi
 }
 
-PS1="%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{green}.%F{red})%f%b "
+function update_prompt {
+  PS1="%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{green}.%F{red})%f%b "
+}
+
+precmd_functions+=(update_prompt)
 
 # Command not found handler
 command_not_found_handler() {
